@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, initial-scale=1.0, maximum-scalee=3.0, minumum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/ayuda.css')}}">
+    <link href="https://file.myfontastic.com/UPJuAtsXSaVKgxW7uiLZF7/icons.css" rel="stylesheet">
+    <title>Ayuda</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container container--flex">
+            <div class="logo-container column column--50">
+                <h1 class="logo">APPadminCarcaStore</h1>
+            </div>
+            <div class="main-header__ContacInfo column column--50 ">
+                <p class="main-header__ContactInfo__Phone">
+                   <span class="icon-phone">+569 68288940</span>
+                </p>
+                <p class="main-header__ContactInfo__Address">
+                   <span class="icon-location">Mall florida center</span>
+                </p>
+                <p class="main-header__ContactInfo__Time">
+                    <span class="icon-time">Horario de atencion 10:00am-18:00pm</span>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container container--flex">
+        <span class="icon-menu" id="btnmenu"></span>
+        <ul class="menu" id="menu">
+            <li class="menu__item"><a href="templates/ayuda.html" class="menu__link">AdminClientes</a></li>
+            <li class="menu__item"><a href="nosotros.html" class="menu__link">AdminProveedor</a></li>
+            <li class="menu__item"><a href="iphone.html" class="menu__link">AdminEmpleados</a></li>
+            <li class="menu__item"><a href="samsung.html" class="menu__link">AdminProductos</a></li>
+            <li class="menu__item"><a href="otro.html" class="menu__link  menu__link--select">Ayuda</a></li>
+        </ul>
+         <div class="social-icon">
+            <a href="https://www.facebook.com/lissetteyhenry" class="social-icon__link"><span class="icon-facebook"></span></a>
+            <a href="https://www.instagram.com/carcastore_l" class="social-icon__link"><span class="icon-instagram"></span></a>
+         </div>
+        </div>
+    </nav>
+
+    <section class="banner">
+        <img src="static/fotobacan.jpeg" alt="" class="banner__img">
+        <div class="banner__content"> Ayuda en caso de incovenientes </div>
+    </section>
+
+    <main class="main">
+      <section class="group-contact">
+        <h2 class="group__title">Contáctenos</h2>
+        <div class="container container--flex">
+          <div class="contact-information column column--50">
+          <h3 class="column__title"> Información de contacto</h3>
+          <p class="column__txt">Envianos un correo en caso de que tengas alguna duda o consulta sobre algun producto o informacion,<br>
+                                 nosotros te contestaremos de inmediato. 
+          </p>
+          <p class="column__txt"> <span class="icon-phone"></span>Telefono: +569 68288940</p>
+          <p class="column__txt"> <span class="icon-location"></span>Ubicacion: Mall florida center</p>
+          <p class="column__txt"> <span class="icon-time"></span>Horario de atencion 10:00am-18:00pm </p>
+          <p class="column__txt"> <span class="icon-mail"></span>Email: carcastore@gmail.com</p>
+          <div class="social-icon">
+            <a href="https://www.facebook.com/lissetteyhenry" class="social-icon__link"><span class="icon-facebook"></span></a>
+            <a href="https://www.instagram.com/carcastore_l" class="social-icon__link"><span class="icon-instagram"></span></a>
+          </div>
+        </div>
+          <form action="enviar-gmail.php" method="POST" class="formulario column column--50">
+            <label for="" class="formulario__label">Nombre:</label>
+            <input type="text" class="formulario__input-txt" name="nombre">
+            <label for="" class="formulario__label">Correo:</label>
+            <input type="text" class="formulario__input-txt" name="correo"> 
+            <label for="" class="formulario__label">Telefono:</label>
+            <input type="text" class="formulario__input-txt" name="telefono">
+            <label for="" class="formulario__label">Mensaje:</label>
+            <textarea name="mensaje" id="" cols="30" rows="10" class="formulario__textarea">
+            </textarea> 
+            <input type="submit" class="btn formulario__btn">  
+          </form>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="container container--flex">
+            <div class="column column--33">
+                <h2 class="column__title">Por que visitarnos?</h2>
+                <p class="column__txt">Contamos con un equipo de trabajo, los cuales son especialistas en todo tipo de celulares <br>
+                                       y estilos, los cuales te ayudaran y te informaran de todo los modelos disponibles.
+                </p>   
+            </div>
+            <div class="column column--33">
+                <h2 class="colum__title">Contactanos</h2>
+                <p class="column__txt">Ubicacion: Mall florida center</p>
+                <p class="column__txt">Telefono: +569 68288940 </p>
+                <p class="column__txt">Horario de atencion 10:00am-18:00pm</p>
+            </div>
+            <div class="column column--33">
+                <h2 class="colum__title">Siguenos en nuestras redes</h2>
+                <p class="column__txt"><a href="" class="icon-facebook">Facebook</a></p>
+                <p class="column__txt"><a href="" class="icon-instagram">Instagram</a></p>
+            </div>
+            <p class="copy">© Todos los derechos reservados CarcaStore 2020</p>
+        </div>
+    </footer>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.3/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    
+    <script src="js/menu.js"></script>
+    <script src="js/contacto.js"></script>
+    
+</body>
+</html>

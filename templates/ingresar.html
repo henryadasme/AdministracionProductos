@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/ingresa.css')}}">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function()
+    {
+        $('.message a').click(function()
+        {
+            $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+            $('#idMensajeError').hide();
+        });
+
+    });
+    </script>
+</head>
+<body>
+    <h1 class="title-uno blockquote text-center">Bienvenido al Sistema Administrativo Carcastore</h1>
+    <p>falta algo aqui</p>
+    <div class="login-page">
+        <div class="form">
+          <form class="register-form" action="/registrar" method="POST">
+            <input type="text"     name="nmNombreRegistro"     required placeholder="nombre"/>
+            <input type="email"    name="nmCorreoRegistro"     required placeholder="correo"/>
+            <input type="password" name="nmContraseñaRegistro" required placeholder="contraseña"/>
+            <button>Registrar</button>
+            <p class="message">ya esta registrado? <a href="#">ingresa</a></p>
+          </form>
+
+          <form class="login-form" action="/ingresar" method="POST">
+            <input type="email"    name="nmCorreoLogin"     required placeholder="correo" />
+            <input type="password" name="nmContraseñaLogin" required placeholder="password"/>
+            <button>login</button>
+            <p class="message">No registrado? <a href="#">Crea una cuenta</a></p>
+          </form>
+           {%with messages = get_flashed_messages(with_categories=true)%}
+               {% if messages %}
+                    {%for category, message in messages%}
+                         <div class="alert" {{category}} id="idMensajeError">
+                             {{message}}
+                         </div>
+                    {%endfor%}
+               {%endif%}
+            {%endwith%}
+        </div>
+      </div>
+</body>
+</html>

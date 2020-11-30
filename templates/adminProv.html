@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdminProveedores</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/estilosinicio.css')}}">
+  <link href="https://file.myfontastic.com/UPJuAtsXSaVKgxW7uiLZF7/icons.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container container--flex">
+            <div class="logo-container column column--50">
+                <h1 class="logo">APPadminCarcaStore</h1>
+            </div>
+            <div class="main-header__ContacInfo column column--50 ">
+                <p class="main-header__ContactInfo__Phone">
+                   <span class="icon-phone">+569 68288940</span>
+                </p>
+                <p class="main-header__ContactInfo__Address">
+                   <span class="icon-location">Mall florida center</span>
+                </p>
+                <p class="main-header__ContactInfo__Time">
+                    <span class="icon-time">Horario de atencion 10:00am-18:00pm</span>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container container--flex">
+        <span class="icon-menu" id="btnmenu"></span>
+        <ul class="menu" id="menu">
+            <li class="menu__item"><a href="templates/inicio.html" class="menu__link">AdminClientes</a></li>
+            <li class="menu__item"><a href="nosotros.html" class="menu__link menu__link--select">AdminProveedor</a></li>
+            <li class="menu__item"><a href="iphone.html" class="menu__link">AdminEmpleados</a></li>
+            <li class="menu__item"><a href="samsung.html" class="menu__link">AdminProductos</a></li>
+            <li class="menu__item"><a href="templates/ayuda.html" class="menu__link">Ayuda</a></li>
+        </ul>
+            <!--Salida de la aplicacion-->
+            <span class="btn btn-primary ">{{session['nombre']}}</span>
+            <a href="/salir" background="crimson" class="btn btn-danger float-right" role="button" aria-pressed="true">Salir</a> 
+         </div>
+        </div>
+    </nav>
+    <section class="banner">
+        <img src="static/img/fotobacan.jpeg" alt="" class="banner__img">
+        <div class="banner__content">Las mejores Carcasas del mundo encuentralas en "Carcarstore"</div>
+    </section>
+
+    <main class="main">
+        <section class="group group--color">
+            <div class="container">
+                <h1 class="main__title"> Administracion de proveedores</h1>
+                <p class="main__txt">Somos la mejor compañia de importacion de carcasas de todo chile, contamos<br>
+                   con diferentes tipos de productos los cuales, llegaran a la puerta de tu casa.
+            </div>
+        </section>
+    </main>
+  
+</body>
+<footer class="main-footer">
+    <div class="container container--flex">
+        <div class="column column--33">
+            <h2 class="column__title">Por que visitarnos?</h2>
+            <p class="column__txt">Contamos con un equipo de trabajo, los cuales son especialistas en todo tipo de celulares <br>
+                                   y estilos, los cuales te ayudaran y te informaran de todo los modelos disponibles.
+            </p>   
+        </div>
+        <div class="column column--33">
+            <h2 class="colum__title">Contactanos</h2>
+            <p class="column__txt">Ubicacion: Mall florida center</p>
+            <p class="column__txt">Telefono: +569 68288940 </p>
+            <p class="column__txt">Horario de atencion 10:00am-18:00pm </p>
+        </div>
+        <div class="column column--33">
+            <h2 class="colum__title">Siguenos en nuestras redes</h2>
+            <p class="column__txt"><a href="" class="icon-facebook">Facebook</a></p>
+            <p class="column__txt"><a href="" class="icon-instagram">Instagram</a></p>
+        </div>
+        <p class="copy">© Todos los derechos reservados CarcaStore 2020</p>
+    </div>
+</footer>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/boostrap.min.js"></script>
+</html>
