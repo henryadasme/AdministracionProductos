@@ -4,59 +4,27 @@ import clasesAdministracion
 
 app = Flask(__name__)
 
-@app.route('/')
-def Index():
-    datos = mantenedorUsuario.consultar()
-    return render_template('administracionUsuarios.html', usuarios=datos)
+@app.route('/mantenedorEmpleado')
+def mantenedorEmpleado():
+    return render_template('adminEmple.html')
+
+@app.route('/mantenedorProducto')
+def mantenedorProducto():
+    return render_template('adminProd.html')
+
+@app.route('/mantenedorProveedor')
+def mantenedorProveedor():
+    return render_template('adminProv.html')
+
+@app.route('/mantenedorUsuarios')
+def mantenedorUsuarios():
+    #datos = mantenedorUsuario.consultar()
+    return render_template('adminUsuarios.html')
     #return render_template('administracionUsuarios.html')
 
-@app.route('/mantenedor', methods=['POST'])
-def mantenedor():
-    if request.method == 'POST':
-
-        #Ingresar usuarios
-        try:
-            auxBotonInsertar = request.form['btoInsertar']
-            if auxBotonInsertar == 'Insertar':
-                auxNombre = request.form['txtNombre']
-                auxContrasena = request.form['txtContrasena']
-                auxRut = request.form['txtRut']
-                auxCorreo = request.form['txtCorreo']
-                auxUsuario = claseUsuario.usuario(auxNombre, auxContrasena, auxRut, auxCorreo)
-                mantenedorUsuario.insertar(auxUsuario)
-                print("Datos guardados correctamente")
-                flash('datos guardados')
-                
-        except:
-            print("Error al guardar")
-
-        #Actualizar usuario
-        try:
-            auxBotonActualizar = request.form['btoActualizar']
-            if auxBotonActualizar == 'Actualizar':
-                auxNombre = request.form['txtNombre']
-                auxContrasena = request.form['txtContrasena']
-                auxRut = request.form['txtRut']
-                auxCorreo = request.form['txtCorreo']
-                auxUsuario = claseUsuario.usuario(auxNombre, auxContrasena, auxRut, auxCorreo)
-                mantenedorUsuario.actualizar(auxUsuario)
-                print("Datos actualizados")
-                
-        except:
-            print("Error al actualizar")
-
-        #Eliminar
-        try:
-            auxBotonEliminar = request.form['btoEliminar']
-            if auxBotonEliminar == 'Eliminar':
-                auxRut = request.form['txtRut']
-                mantenedorUsuario.eliminar(auxRut)
-                print("Usuario eliminado ")
-                
-        except:
-            print("Error al Eliminar")
-
-        return redirect(url_for('Index'))
+@app.route('/')
+def Index():
+    return render_template('inicio.html')
 
 
 if __name__ == '__main__':

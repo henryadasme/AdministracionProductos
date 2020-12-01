@@ -27,6 +27,3 @@ class Proveedor:
         self.idproveedor = idproveedor
         self.telefono = telefono
         self.nomproveedor = nomproveedor
-
-#auxCliente = Cliente("19942321-4","alvaro","yankee_24@hotmail.com","pajenry123")
-#print(auxCliente.rut)
