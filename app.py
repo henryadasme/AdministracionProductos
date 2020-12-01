@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
-import mantenedorUsuario
-import claseUsuario
+import mantenedorAdministracion
+import clasesAdministracion
 
 app = Flask(__name__)
 
